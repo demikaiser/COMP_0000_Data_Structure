@@ -14,12 +14,13 @@ int main() {
   printf("ps after: %x\n", ps);
 
   ps->i = 1;
+  (*ps).i = 2;
   ps->f = 1.01;
 
   /* Access a Value in Struct */
-  printf("i: %d\n", s.i);
-  printf("i: %d\n", ps->i);
-  printf("i: %d\n", (*ps).i);
+  printf("s.i: %d\n", s.i);
+  printf("ps->i: %d\n", ps->i);
+  printf("(*ps).i: %d\n", (*ps).i);
 
   /* Dereferencing */
   int number, *p_number;
