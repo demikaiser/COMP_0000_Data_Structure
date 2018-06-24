@@ -101,3 +101,39 @@ ListNode *create_node(element data, ListNode *link)
   new_node->link =link;
   return(new_node);
 }
+
+main()
+{
+  ListNode *list1 =NULL, *list2 =NULL;
+  ListNode *p;
+
+  insert_node(&list1, NULL, create_node(10, NULL));
+  insert_node(&list1, NULL, create_node(20, NULL));
+  insert_node(&list1, NULL, create_node(30, NULL));
+  insert_node(&list1, NULL, create_node(40, NULL));
+  insert_node(&list1, NULL, create_node(50, NULL));
+
+  display(list1);
+
+  remove_node(&list1, null, list1);
+  display(list2);
+
+  insert_node(&list2, NULL, create_node(50, NULL));
+  insert_node(&list2, NULL, create_node(60, NULL));
+  insert_node(&list2, NULL, create_node(70, NULL));
+  insert_node(&list2, NULL, create_node(80, NULL));
+  insert_node(&list2, NULL, create_node(90, NULL));
+
+  display(list2);
+
+  remove_node(&list2, null, list2);
+
+  list1 = concat(list1, list2);
+  display(list1);
+
+  list1 =reverse(list1);
+  display(list1);
+
+  p= search(list1, 40);
+  printf("%d\n", p->data);
+}
