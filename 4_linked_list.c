@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+//making the structure
 typedef int element;
 typedef struct ListNode {
   element data;
