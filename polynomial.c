@@ -8,7 +8,7 @@ typedef struct polynomial {
   int coef[MAX_DEGREE];
 } Polynomial;
 
-polynomail poly_add(polynomial A, polynomial B){
+polynomial poly_add(polynomial A, polynomial B){
 
   Polynomial C;
   int Apos=0, Bpos=0, Cpos=0;
