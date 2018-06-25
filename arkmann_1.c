@@ -2,6 +2,7 @@ int NonR_A(int m, int n){
   int table[5][5000];
   int i, j;
   for (i =0; i <= m; i++){
+    for(j=0; j <5000; j++){
     if(i==0){
       table[i][j] = j+1;
     }
@@ -11,7 +12,7 @@ int NonR_A(int m, int n){
     else{
       table[i][j] = table[i-1][table[i][j-1]];
     }
-
+  }
   }
   return table[m][n];
 }
