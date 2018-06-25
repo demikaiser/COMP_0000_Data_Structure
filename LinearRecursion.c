@@ -21,10 +21,10 @@ int NR_L_R(int base, int exp){
   int i;
   int f = 1;
 
-  for(i=0; i<exp; i++){
-    f= base*f;
-    return f;
+  for(i = 0; i < exp; i++) {
+    f = base*f;
   }
+  return f;
 }
 
 int main(){

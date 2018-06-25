@@ -3,8 +3,8 @@
 #include <time.h>
 
 //recursive fatorial
-int re_factorial(int n){
-  if(n == 0){
+int re_factorial(int n) {
+  if(n == 0) {
     return 1;
   }
   else if(n >= 1){
@@ -13,17 +13,17 @@ int re_factorial(int n){
 }
 
 //non-recursive factorial
-int Nonre_factorial(int n){
-  int i,f = 1;
+int Nonre_factorial(int n) {
+  int i, f = 1;
 
-  if (n <= 1){
+  if (n <= 1) {
     return 1;
   }
-  else{
-    for(i = n; i > 0; i--){
-      f= f*i;
-      return f;
+  else {
+    for(i = n; i > 0; i--) {
+      f = f * i;
     }
+    return f;
   }
 }
 
