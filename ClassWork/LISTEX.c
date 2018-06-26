@@ -8,7 +8,6 @@ typedef struct ListNode {
   struct ListNode *link;
 } ListNode;
 
-
 //creating the node
 ListNode *create_node(element data, ListNode *link){
   ListNode *new_node;
