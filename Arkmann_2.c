@@ -16,26 +16,6 @@ int R_A(int m, int n) {
 }
 
 //NonRecursive_Ackerman
-<<<<<<< HEAD:Arkmann_2.c
-int NonR_A(int m, int n){
-  int table[5][5000];
-  int i, j;
-  for (i =0; i <= m; i++){
-    for(j=0; j <5000; j++){
-    if(i==0){
-      table[i][j] = j+1;
-    }
-    else if(j==0) {
-      table[i][j] = table[i-1][1];
-    }
-    else{
-      table[i][j] = table[i-1][table[i][j-1]];
-    }
-  }
-  }
-
-  return table[m][n];
-=======
 int NonR_A(int m, int n) {
   int *value = NULL;
   size_t size = 0;
@@ -65,7 +45,6 @@ int NonR_A(int m, int n) {
 
   free(value);
   return n;
->>>>>>> 982e26a7e918349829046be468f0230ee4964f20:Arkmann.c
 }
 
 int main() {
@@ -82,17 +61,5 @@ int main() {
   result = NonR_A(m,n);
   printf("Non R_A(%d,%d) = %d \n",m, n, result);
 
-<<<<<<< HEAD:Arkmann_2.c
-
-
-  printf("M:");
-  scanf("%d", &m);
-  printf("N:");
-  scanf("%d", &n);
-  result = NonR_A(m,n);
-  printf("(%d,%d) = %d \n",m, n, result);
-
-=======
   return 0;
->>>>>>> 982e26a7e918349829046be468f0230ee4964f20:Arkmann.c
 }
