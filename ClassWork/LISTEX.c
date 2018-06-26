@@ -11,7 +11,7 @@ typedef struct ListNode {
 //creating the node
 ListNode *create_node(element data, ListNode *link){
   ListNode *new_node;
-  new_node = (ListNode*)malloc(sizeof(ListNode));
+  new_node = (ListNode*)malloc(sizeof(ListNode*));
   new_node->data = data;
   new_node->link = link;
   return new_node;
