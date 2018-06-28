@@ -2,39 +2,67 @@
 #include <time.h>
 #include <stdlib.h>
 
-int Searching_Max(int* a, int n) {
-  int max;
+//find out the max number in the array
+void int Searching_Max(int* a, int n) {
+  int max = 0;
   int i;
   for(i = 0; i < n; i++) {
-    if(max < a[i]) {
-      max = a[i];
+    if(max < *(a + i)) {
+      max = *(a + i);
     }
   }
   printf("Max Number in this array: %d\n", max);
 }
 
-int Searching_Min(int* a, int n) {
+//find out the min number in the array
+void int Searching_Min(int* a, int n) {
   int min;
   int i;
   for(i = 0; i < n; i++) {
-      if(min > a[i]) {
-        min = a[i];
+      if(min > *(a+i)) {
+        min = *(a+i);
       }
   }
   printf("Min Number in this array: %d\n", min);
 }
 
-int Length(int *a) {
-  int n = 0;
-  for(a; a != NULL; a++) {
-    n = n +1;
-  }
-  return n;
-  printf("%d\n", n);
-}
+//in order to get the length of the array
+// int Length(int *a) {
+//   int n = 0;
+//   for(a; a != NULL; a++) {
+//     n = n +1;
+//   }
+//   printf("%d\n", n);
+//   return n;
+// }
 
 int main() {
   int i;
-  int a[5] = {1, 2, 3, 4, 5};
+  int result;
+  clock_t start, finish;
+  double duration;
 
+  //experiment 1
+  start = clock();
+  int a[5] = {1, 2, 3, 4, 5};
+  Searching_Max(a,5);
+  finish = clock();
+  duration = (double)(finish - start);
+  printf("%f\n", duration);
+
+
+  //experiment 2
+  start = clock();
+  for(i = 0; i < 5; i++){
+    if(result < a[i]){
+      result = a[i];
+    }
+  }
+  finish = clock();
+  duration = (double)(finish - start);
+  printf("Max Number in this array: %d\n", result);
+  printf("%f\n", duration);
+  sleep(); // why do i have to put sleep in order to operate function min
+
+  Searching_Min(a,5);
 }
