@@ -5,22 +5,26 @@
 
 typedef struct Node {
   int data;
-  int* next;
-  typedef struct* head;
-} node;
+  typedef struct* next;
+} Node;
 
-void create_node(int data, int* next) {
-  int* head = node.head;
-  head = (int *)malloc(sizeof(int*));
-  head -> node.next;
+Node *create_node(int data_input) {
+  Node *p_Node = (Node *)malloc(sizeof(Node));
+  p_Node->data = data_input;
 
-
-
+  return p_Node;
 }
 
 
 
+void print_node(Node *head) {
+
+}
+
 int main() {
+
+
+
 
   return 0;
 }
