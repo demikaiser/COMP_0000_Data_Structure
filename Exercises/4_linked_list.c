@@ -110,7 +110,6 @@ ListNode *create_node(element data, ListNode *link)
 {
   ListNode *new_node;
   new_node = (ListNode*)malloc(sizeof(ListNode));
-  if (new_node == NULL) error("memory allocated error");
   new_node->data = data;
   new_node->link = link;
   return new_node;
