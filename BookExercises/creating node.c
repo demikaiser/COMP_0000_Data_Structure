@@ -71,6 +71,6 @@ int main() {
   remove_node(&list1, p, t);
   display(list1);
 
-
+  FREE();
   return 0;
 }
